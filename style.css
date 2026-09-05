@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fff8fa;
+    color: #4a3038;
+    line-height: 1.8;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(255, 220, 230, 0.75),
+            rgba(255, 245, 248, 0.9)
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.small-title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 10vw, 100px);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background: #ffffff;
+
+    color: #7d4354;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* FLOATING HEARTS */
+
+.hearts span {
+    position: absolute;
+    font-size: 25px;
+
+    animation:
+        float 6s infinite ease-in-out;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.hearts span:nth-child(2) {
+    right: 15%;
+    top: 25%;
+}
+
+.hearts span:nth-child(3) {
+    left: 20%;
+    bottom: 20%;
+}
+
+.hearts span:nth-child(4) {
+    right: 25%;
+    bottom: 15%;
+}
+
+.hearts span:nth-child(5) {
+    right: 8%;
+    bottom: 35%;
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    opacity: 0.65;
+}
+
+.section h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+
+/* LETTER */
+
+.letter-section {
+    max-width: 800px;
+}
+
+.letter {
+    background: #fff;
+
+    padding: 50px;
+
+    margin-top: 30px;
+
+    text-align: left;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.08);
+
+    border-radius: 10px;
+}
+
+.letter p {
+    margin-bottom: 22px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+}
+
+
+/* MUSIC */
+
+.music-section {
+    background: #fbe8ee;
+    max-width: none;
+}
+
+audio {
+    margin-top: 25px;
+    width: min(500px, 100%);
+}
+
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.photo-card {
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+
+    border-radius: 7px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+.photo-card p {
+    padding: 12px 5px;
+}
+
+
+/* VIDEO */
+
+.video-section {
+    background: #fff0f4;
+    max-width: none;
+}
+
+video {
+    width: min(800px, 100%);
+
+    margin-top: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.15);
+}
+
+
+/* FINAL */
+
+.final-section {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #f9dce5;
+}
+
+.big-heart {
+    font-size: 80px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+.final-section h2 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.final-section h1 {
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.final-name {
+    margin-top: 25px;
+}
+
+
+/* HEARTBEAT */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 70px 18px;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+    .letter {
+        padding: 30px 22px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .final-section h1 {
+        font-size: 38px;
+    }
+}
